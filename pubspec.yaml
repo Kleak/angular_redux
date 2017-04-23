@@ -1,0 +1,38 @@
+name: basic
+description: A web app that uses AngularDart Components
+version: 0.0.1
+#homepage: https://www.example.com
+#author: kleak <email@example.com>
+
+environment:
+  sdk: '>=1.20.1 <2.0.0'
+
+dependencies:
+  angular2: '^3.0.0-beta+2'
+  redux: "^1.0.0"
+  logging: "^0.11.3+1"
+
+dev_dependencies:
+  browser: ^0.10.0
+  dart_to_js_script_rewriter: ^1.0.1
+  angular_test: '^1.0.0-beta+2'
+  test: ^0.12.20+10
+
+transformers:
+#  - angular2/transform/codegen
+#  - angular2/transform/reflection_remover:
+#      $include:
+#        - test/app_component_test.dart
+#  - test/pub_serve:
+#      $include: test/**_test.dart
+
+  - angular2:
+      platform_directives:
+      - 'package:angular2/common.dart#COMMON_DIRECTIVES'
+      platform_pipes:
+      - 'package:angular2/common.dart#COMMON_PIPES'
+      entry_points: web/main.dart
+      resolved_identifiers:
+          Store: 'package:redux/redux.dart'
+          AppConfig: 'package:basic/config.dart'
+  - dart_to_js_script_rewriter

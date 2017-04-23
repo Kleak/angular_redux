@@ -1,0 +1,24 @@
+/* Copyright (c) 2017, kleak. All rights reserved. Use of this source code
+   is governed by a BSD-style license that can be found in the LICENSE file. */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Material+Icons);
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 0;
+  padding: 0;
+  color: white;
+}
+
+
+body {
+  background: -webkit-linear-gradient(blue, green);
+  background: linear-gradient(blue, green);
+}
+
+* {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
