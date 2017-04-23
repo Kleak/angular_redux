@@ -9,7 +9,7 @@ import 'package:basic/components/demo/demo.dart';
   directives: const [ROUTER_DIRECTIVES],
 )
 @RouteConfig(const [
-  const Route(name: 'Demo', path: '/', useAsDefault: true, component: Demo)
+  const Route(name: 'Demo', path: '/', useAsDefault: true, component: DemoComponent)
 ])
 class AppComponent {
   final String title = 'Boilerplate for angular and redux';
