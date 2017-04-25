@@ -4,8 +4,8 @@ import 'package:basic/components/demo/demo.dart';
 
 @Component(
   selector: 'my-app',
-  styleUrls: const ['./app_component.css'],
   templateUrl: './app_component.html',
+  styleUrls: const ['./app_component.css'],
   directives: const [ROUTER_DIRECTIVES],
 )
 @RouteConfig(const [

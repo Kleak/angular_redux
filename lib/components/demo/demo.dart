@@ -7,7 +7,7 @@ import 'package:redux/redux.dart';
 @Component(
   selector: 'demo',
   templateUrl: './demo.html',
-  changeDetection: ChangeDetectionStrategy.Stateful,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   directives: const [SpyDirective],
 )
 class DemoComponent extends ComponentState implements OnInit {
@@ -25,9 +25,9 @@ class DemoComponent extends ComponentState implements OnInit {
         .listen(_onStateChanged);
   }
 
-  void _onStateChanged(AppState state) => setState(() {
-        counter = state.counter;
-      });
+  void _onStateChanged(AppState state) {
+    counter = state.counter;
+  }
 
   void increment() => _store.dispatch(new Increment());
 
