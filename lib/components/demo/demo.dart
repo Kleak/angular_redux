@@ -7,6 +7,7 @@ import 'package:redux/redux.dart';
 @Component(
   selector: 'demo',
   templateUrl: './demo.html',
+  styleUrls: const ['demo.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   directives: const [SpyDirective],
 )

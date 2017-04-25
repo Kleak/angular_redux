@@ -1,0 +1,10 @@
+$primary-color: #2196F3;
+
+$primary-text-color: black;
+$second-text-color: white;
+
+button {
+  background-color: $primary-color;
+  color: $second-text-color;
+  border: none;
+}
